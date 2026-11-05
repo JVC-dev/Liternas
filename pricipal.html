@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños - Farolas Mágicas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Lienzo interactivo de las farolas y la noche -->
+    <canvas id="skyCanvas"></canvas>
+
+    <!-- Botón de control inferior -->
+    <div class="ui-container">
+        <button class="btn btn-primary" id="grandFinaleBtn">🌟 Gran Mensaje de Cumpleaños</button>
+    </div>
+
+    <!-- Tarjeta especial de cumpleaños final -->
+    <div class="birthday-card" id="birthdayCard">
+        <h2>¡Feliz Cumpleaños! 🎉</h2>
+        <p>Gracias por ser una hermana tan maravillosa 💖, gracias por ser mi compañera y amiga en mi niñez. Quizás a veces no me expreso como debería, pero te quiero desear un feliz cumpleaños de la mejor manera que sé. Hoy en día se siente raro no tenerte en casa, pero me hace muy feliz ver cómo vas cumpliendo tus metas. Sé que eres una mujer fuerte e independiente. Te felicito hermana, y me alegra muchísimo tenerte en mi vida. ¡Feliz cumpleaños! Te quiere mucho, tu hermano.</p>
+        <button class="btn btn-primary" id="closeCardBtn" style="background: #d84315; color: #fff;">Cerrar con Magia</button>
+    </div>
+    <!-- Audio de fondo -->
+<audio id="bgMusic" loop>
+    <source src="Avicii - Hey Brother .mp3" type="audio/mp3">
+</audio>
+
+    <script src="interaccion.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle at bottom, #0f172a 0%, #090d16 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Panel inferior para el botón pequeño */
+.ui-container {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+}
+
+/* Estilo del botón reducido y elegante */
+.btn {
+    background: rgba(255, 183, 77, 0.2);
+    border: 1px solid rgba(255, 183, 77, 0.6);
+    color: #ffd54f;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: rgba(255, 183, 77, 0.35);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.3), rgba(255, 112, 67, 0.3));
+    border: 1px solid rgba(255, 183, 77, 0.8);
+    color: #ffe082;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.5), rgba(255, 112, 67, 0.5));
+    color: #fff;
+}
+
+/* Tarjeta de Cumpleaños */
+.birthday-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: linear-gradient(145deg, #fff8e1, #ffecb3);
+    color: #3e2723;
+    padding: 40px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 4px solid #ffb74d;
+}
+
+.birthday-card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.birthday-card h2 {
+    font-size: 2rem;
+    color: #d84315;
+    margin-bottom: 15px;
+    font-family: serif;
+}
+
+.birthday-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #5d4037;
+}
